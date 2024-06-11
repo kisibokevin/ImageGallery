@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.title{
+    text-align: center;
+    margin: 20px 0;
+    font-weight: 400;
+    font-size: 40px;
+    color: #333;
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.image{
+    width: 380px;
+    height: 280px;
+    border-radius: 10px;
+}
+
+.imgTitle{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.imgDesc{
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 4px;
+}
+
+.imageContainer:hover{
+    transform: scale(1.1);
+}
