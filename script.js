@@ -45,6 +45,15 @@ function loadImage(){
     Images.forEach(Image => {
         const imageContainer = document.createElement('div');
         imageContainer.className = 'imageContainer';
+        imageContainer.addEventListener('click', () => {
+            console.log('clicked');
+
+            const modal = document.querySelector('.modal');
+            const modalImg = document.querySelector('.modal img');
+            modal.style.display = 'block';
+            modalImg.className = 'modalImg';
+            modalImg.src = Image.url;
+        })
 
         const img = document.createElement('img');
         img.className = 'image';
@@ -68,5 +77,13 @@ function loadImage(){
 
         gallery.appendChild(imageContainer);
     });
-}
+};
+
+const closeModal = document.querySelector('.close');
+
+closeModal.addEventListener('click', () => {
+    const modal = document.querySelector('.modal');
+    modal.style.display = 'none';
+});
+
 });
